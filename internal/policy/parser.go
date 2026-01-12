@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"github.com/yourusername/aws-access-map/pkg/types"
+	"github.com/pfrederiksen/aws-access-map/pkg/types"
 )
 
 // Parse parses a URL-encoded policy document string

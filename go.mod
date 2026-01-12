@@ -1,4 +1,4 @@
-module github.com/yourusername/aws-access-map
+module github.com/pfrederiksen/aws-access-map
 
 go 1.25.5
 

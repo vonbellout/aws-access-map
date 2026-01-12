@@ -187,7 +187,7 @@ Even with limitations, it's faster than AWS Console, simpler than CLI scripting,
 - [x] License added (MIT)
 - [x] Version set (0.1.0-mvp)
 - [x] Experimental features marked
-- [ ] **TODO:** Replace `yourusername` in GitHub URLs
+- [ ] **TODO:** Replace `pfrederiksen` in GitHub URLs
 - [ ] **TODO:** Test on one more AWS account (if possible)
 
 ### GitHub Repository Setup

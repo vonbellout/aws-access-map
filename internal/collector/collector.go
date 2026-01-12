@@ -6,8 +6,8 @@ import (
 
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/iam"
-	"github.com/yourusername/aws-access-map/internal/policy"
-	"github.com/yourusername/aws-access-map/pkg/types"
+	"github.com/pfrederiksen/aws-access-map/internal/policy"
+	"github.com/pfrederiksen/aws-access-map/pkg/types"
 )
 
 // Collector handles fetching data from AWS APIs

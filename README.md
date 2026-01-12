@@ -59,18 +59,18 @@ aws-access-map report --high-risk
 
 ### From Source
 ```bash
-git clone https://github.com/yourusername/aws-access-map
+git clone https://github.com/pfrederiksen/aws-access-map
 cd aws-access-map
 make build
 ./build/aws-access-map --help
 ```
 
 ### Pre-built Binaries
-Download from [releases](https://github.com/yourusername/aws-access-map/releases) (coming soon).
+Download from [releases](https://github.com/pfrederiksen/aws-access-map/releases) (coming soon).
 
 ### Go Install
 ```bash
-go install github.com/yourusername/aws-access-map/cmd/aws-access-map@latest
+go install github.com/pfrederiksen/aws-access-map/cmd/aws-access-map@latest
 ```
 
 ## Quick Start

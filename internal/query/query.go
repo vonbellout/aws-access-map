@@ -3,8 +3,8 @@ package query
 import (
 	"fmt"
 
-	"github.com/yourusername/aws-access-map/internal/graph"
-	"github.com/yourusername/aws-access-map/pkg/types"
+	"github.com/pfrederiksen/aws-access-map/internal/graph"
+	"github.com/pfrederiksen/aws-access-map/pkg/types"
 )
 
 // Engine handles queries against the access graph

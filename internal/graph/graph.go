@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/yourusername/aws-access-map/pkg/types"
+	"github.com/pfrederiksen/aws-access-map/pkg/types"
 )
 
 // Graph represents the access graph

@@ -197,7 +197,7 @@ Can users accomplish these core tasks?
 2. **Add version flag** - Users expect `--version`
 3. **Test on another AWS account** - Verify it's not account-specific
 4. **Add LICENSE file** - MIT as stated in README
-5. **Update GitHub URLs** - Replace `yourusername` placeholder
+5. **Update GitHub URLs** - Replace `pfrederiksen` placeholder
 
 ### Short-term (Week 1-2)
 1. **Enhanced wildcard matching** - Use Go glob library

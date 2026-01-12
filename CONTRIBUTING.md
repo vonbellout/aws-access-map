@@ -37,7 +37,7 @@ Have an idea? Open an issue describing:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/aws-access-map
+git clone https://github.com/pfrederiksen/aws-access-map
 cd aws-access-map
 
 # 2. Build
