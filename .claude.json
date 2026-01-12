@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "pre-commit": "make build && git add build/"
+  },
+  "mcp": {},
+  "gitConfig": {
+    "user.name": "Paul Frederiksen",
+    "user.email": "paul@paulfrederiksen.com"
+  }
+}
