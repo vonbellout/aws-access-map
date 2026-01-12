@@ -15,7 +15,7 @@ import (
 
 var (
 	// Version information
-	version = "0.1.0-mvp"
+	version = "0.3.0"
 
 	// Global flags
 	profile string
